@@ -7,6 +7,7 @@
 //! is used, such as `ContentType(pub Mime)`.
 
 pub use self::accept::Accept;
+pub use self::allow::Allow;
 pub use self::authorization::Authorization;
 pub use self::cache_control::CacheControl;
 pub use self::cookie::Cookies;
@@ -14,9 +15,11 @@ pub use self::connection::Connection;
 pub use self::content_length::ContentLength;
 pub use self::content_type::ContentType;
 pub use self::date::Date;
+pub use self::etag::Etag;
 pub use self::expires::Expires;
 pub use self::host::Host;
 pub use self::last_modified::LastModified;
+pub use self::if_modified_since::IfModifiedSince;
 pub use self::location::Location;
 pub use self::transfer_encoding::TransferEncoding;
 pub use self::upgrade::Upgrade;
@@ -72,6 +75,9 @@ macro_rules! deref(
 /// Exposes the Accept header.
 pub mod accept;
 
+/// Exposes the Allow header.
+pub mod allow;
+
 /// Exposes the Authorization header.
 pub mod authorization;
 
@@ -93,6 +99,9 @@ pub mod content_type;
 /// Exposes the Date header.
 pub mod date;
 
+/// Exposes the Etag header.
+pub mod etag;
+
 /// Exposes the Expires header.
 pub mod expires;
 
@@ -101,6 +110,9 @@ pub mod host;
 
 /// Exposes the LastModified header.
 pub mod last_modified;
+
+/// Exposes the If-Modified-Since header.
+pub mod if_modified_since;
 
 /// Exposes the Location header.
 pub mod location;
